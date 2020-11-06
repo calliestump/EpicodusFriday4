@@ -32,7 +32,6 @@ Pizza.prototype.makePizza = function() {
   //var userSize = document.getElementsByName("pizzaSize");
   this.size = $("input[name='pizzaSize']:checked").val(); 
   var checkedBoxes2 = [];
-  this.cost = 0;
   for (var i=0; i<this.size.length; i++) {
     if (this.size[i].checked) {
       checkedBoxes2.push(this.size[i].value);
@@ -41,14 +40,15 @@ Pizza.prototype.makePizza = function() {
   if (this.size == "medium") {
     this.cost +1;
   }
- reciept
+  
   $(".finalToppings").last().append(checkedBoxes1 + "");
   $(".finalSize").append(this.size);
   $(".name").append($(".userName").val());
   $(".number").append($(".userNumber").val());
   //console.log(madePizza);
   //return madePizza;
-  if (userSize == "medium") {
+  this.cost = 0;
+  if (this.size == "medium") {
     this.cost +1;
   }
 }
@@ -59,6 +59,6 @@ $(document).ready(function() {
     event.preventDefault();
     Pizza.prototype.makePizza();
     alert(this.cost);
-    console.log(cost);
+    console.log(this.cost);
   });
 });
