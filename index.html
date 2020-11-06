@@ -11,19 +11,29 @@
   <div class="container">
     <h1>Callies Pizza Parlor</h1>
     <img>
+    <label for="name">Order Name: </label>
+      <input type="text" id="name">
     <form id="parlor">
       <div class="row">
         <div class="topping">
           <h3>Toppings</h3>
           <section class="col-md-6">
-            <ul class="toppingList">
-            </ul>
-            <button class="addTopBtn btn-success">Add Toppings</button>
+            <div class="toppingList">
+              <p>Each topping cost ($1.00)</p>
+              <label for="cheese">Cheese</label>
+              <input type="checkbox" name="toppingOption" value="cheese">
+              <label for="cheese">Bacon</label>
+              <input type="checkbox" name="toppingOption" value="bacon">
+              <label for="cheese">Sausage</label>
+              <input type="checkbox" name="toppingOption" value="sausage">
+            <div>
+            <button class="addTopBtn btn-success">Add</button>
           </section>
         </div>  
         <div class="reciept">
           <section class="col-md-6">
             <h3>Reciept</h3>
+            <p>Name:<span id="name"></span></p>
             <p>Toppings:</p>
             <p>Size:</p>
           </section>
@@ -32,8 +42,15 @@
         <div class="size">
           <h3>Pizza Size</h3>
           <section class="col-md-6">
-            <p class="sizeOutput"></p>
-            <button class="addSizeBtn btn-success">Add Size</button>
+            <div class="sizeList">
+              <label for="small">Small: ($4.00)</label>
+              <input type="checkbox" name="pizzaSize" value="small">
+              <label for="medium">Medium: ($6.00)</label>
+              <input type="checkbox" name="pizzaSize" value="medium">
+              <label for="large">Large: ($9.00)</label>
+              <input type="checkbox" name="pizzaSize" value="large">
+            </div>
+            <button class="addSizeBtn btn-success">Add</button>
           </section>
         </div>
       </div>
