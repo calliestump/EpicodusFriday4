@@ -1,3 +1,4 @@
+
 .jumbotron-reciept {
  display: none;
 }
@@ -19,6 +20,8 @@ h1{
 }
 .container {
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .jumbotron-topping {
   width: fit-content;
@@ -36,10 +39,28 @@ h1{
   margin-left: auto;
   margin-right: auto;
 }
-.jumbotron-reciept{
-  width: fit-content;
-  height: fit-content;
-  margin-top: auto;
+.jumbotron-reciept {
   margin-left: auto;
   margin-right: auto;
+  width: fit-content;
+  height: fit-content;
+}
+.jumbotron-name {
+  margin-top: auto;
+  width: fit-content;
+  height: fit-content;
+}
+img {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5%;
+  float: right;
+  float: initial;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 5px;
+  width: auto;
+  height: 300px;
+
+
 }
