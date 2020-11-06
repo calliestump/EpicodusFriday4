@@ -36,9 +36,9 @@ git remote add origin [repo. link]
 ## **Specs**
 
 ```
-Describe: 
-Test: 
-Expect 
+Describe: Pizza(size, topping);
+Test: takes in two objects into the constructor
+Expect (Pizza(size, topping)).toEqual(true)
 ```
 ```
 Describe: 
