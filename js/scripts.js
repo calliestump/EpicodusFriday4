@@ -43,7 +43,7 @@ Pizza.prototype.makePizza = function() {
   
   $(".finalToppings").last().append(checkedBoxes1 + "");
   $(".finalSize").append(this.size);
-  $(".name").append($(".userName").val());
+  $(".name").append($(".userName1").val());
   $(".number").append($(".userNumber").val());
   //console.log(madePizza);
   //return madePizza;
@@ -55,10 +55,10 @@ Pizza.prototype.makePizza = function() {
 
 $(document).ready(function() {
   $("form#parlor").submit(function(event) {
-    $(".jumbotron-reciept").show();
+    $(".reciept").show();
     event.preventDefault();
     Pizza.prototype.makePizza();
-    alert(this.cost);
+    //alert(this.cost);
     console.log(this.cost);
   });
 });
