@@ -41,9 +41,9 @@ Test: takes in two objects into the constructor
 Expect (Pizza(size, topping)).toEqual(true)
 ```
 ```
-Describe: 
-Test: 
-Expect 
+Describe: makePizza();
+Test: adds size and toppings to individual list for assignment
+Expect makePizza().toEqual(true)
 ```
 
 ## Legal
