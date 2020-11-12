@@ -1,64 +1,41 @@
-function Pizza(size, toppings) {
-  this.toppings = toppings;
-  this.size = size;
+function Pizza(size) {
+  this.pizzaSize = size;
+  this.toppings = 0;
+  this.toppingsName = [];
 }
-/*Pizza.prototype.cost = function (){
-  var cost = {
-    cheese: 1.00,
-    bacon: 1.00,
-    sausage: 1.00
-  }
 
-}*/
-/*Pizza.prototype.cost = function (){
-  var cost = 0;
-  if (this.size === "medium") {
-    cost + 9;
-  }
-  this.cost = cost;
-}*/
-//User
-//cost calc.
+Pizza.prototype.totalCost = function() {
+  var cost = "$" + (this.pizzaSize + this.toppings) + ".00";
+  return cost;
+};
 
-Pizza.prototype.makePizza = function() {
-  this.toppings = document.getElementsByName("toppingOption");
-  //this.toppings = userToppings;
-  var checkedBoxes1 = [];
-  for (var i=0; i<this.toppings.length; i++) {
-    if (this.toppings[i].checked) {
-      checkedBoxes1.push(this.toppings[i].value);
-    }
-  }
-  //var userSize = document.getElementsByName("pizzaSize");
-  this.size = $("input[name='pizzaSize']:checked").val(); 
-  var checkedBoxes2 = [];
-  for (var i=0; i<this.size.length; i++) {
-    if (this.size[i].checked) {
-      checkedBoxes2.push(this.size[i].value);
-    }
-  }  
-  if (this.size == "medium") {
-    this.cost +1;
-  }
-  
-  $(".finalToppings").last().append(checkedBoxes1 + "");
-  $(".finalSize").append(this.size);
-  $(".name").append($(".userName1").val());
-  $(".number").append($(".userNumber").val());
-  //console.log(madePizza);
-  //return madePizza;
-  this.cost = 0;
-  if (this.size == "medium") {
-    this.cost +1;
-  }
+Pizza.prototype.addUserTopping = function(sum, id) {
+  this.toppings += sum;
+  this.toppingsName.push(id);
+}
+
+Pizza.prototype.toppingFinal = function () {
+  return this.toppingsName.join(", ");
 }
 
 $(document).ready(function() {
+  
   $("form#parlor").submit(function(event) {
     $(".reciept").show();
     event.preventDefault();
-    Pizza.prototype.makePizza();
-    //alert(this.cost);
-    console.log(this.cost);
+
+    var userSize = parseFloat($("#pizzaSize").val());
+    var sizeReceipt = $("#pizzaSize option:selected").text();
+    var userOrder = new Pizza(userSize);
+
+    $("input[type=checkbox]:checked").each(function(name,checkbox) {
+      userOrder.addUserTopping(parseFloat($(checkbox).val()), checkbox.name);
+    });
+    $("#name").append($(".userName1").val());
+    $("#number").append($(".userNumber").val());
+    $("#finalSize").append(sizeReceipt);
+    $("#finalToppings").append(userOrder.toppingFinal());
+    $("#finalTotal").append(userOrder.totalCost());
+
   });
 });

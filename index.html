@@ -10,59 +10,66 @@
 <body>
   <form id ="parlor">
     <h1>Callie's Pizza Parlor</h1><hr>
-    <!img src="img/pizza.jpg" alt="Restaurant">
-    
     <div class="container">
       <div name="contact" class="userName">
-        <label for="name">Order Name: </label><hr>
+        <label for="name">Order Name: </label><br>
         <input type="text" class="userName1">
         <br>
         <br>
-        <label for="number">Phone Number: </label><hr>
+        <label for="number">Phone Number: </label><br>
         <input type="text" class="userNumber">
       </div>
-  
+      <hr>
       <div name="topping" class="toppings">
-        <h3>Toppings</h3><hr>
-        <section class="col-md-6">
-          <div class="toppingList">
-            <label for="cheese">Cheese ($1.00)</label>
-            <input type="checkbox" name="toppingOption" value="cheese"><br>
-            <label for="cheese">Bacon ($1.00)</label>
-            <input type="checkbox" name="toppingOption" value="bacon"><br>
-            <label for="cheese">Sausage ($1.00)</label>
-            <input type="checkbox" name="toppingOption" value="sausage"><br>
-          <div>
-        </section>
+        <h3>Toppings</h3><br>
+        <div id="toppingList">
+          <label class="custom-checkbox">Cheese ($1.00)</label>
+          <input name="cheese" type="checkbox" class="toppings" value="1.00"><br>
+          <label class="custom-checkbox">Doubled Cheese ($2.00)</label>
+          <input name="doubledCheese" type="checkbox" class="toppings" value="2.00"><br>
+          <label class="custom-checkbox">Pineapple ($1.00)</label>
+          <input name="pineapple" type="checkbox" class="toppings" value="1.00"><br>
+          <label class="custom-checkbox">Pepperoni ($1.00)</label>
+          <input name="pepperoni" type="checkbox" class="toppings" value="1.00"><br>
+          <label class="custom-checkbox">Bacon ($1.00)</label>
+          <input name="bacon" type="checkbox" class="toppings" value="1.00"><br>
+          <label class="custom-checkbox">Sausage ($1.00)</label>
+          <input  name="sausage" type="checkbox" class="toppings" value="1.00"><br>
+          <label class="custom-checkbox">Ham ($1.00)</label>
+          <input  name="ham" type="checkbox" class="toppings" value="1.00"><br>
+        <div>
+        
       </div>  
-
+      <hr>
       <div name="size" class="size">
-        <h3>Pizza Size</h3><hr>
-        <section class="col-md-6">
-          <div class="sizeList">
-            <label for="small">Small: ($4.00)</label>
-            <input type="checkbox" name="pizzaSize" value="small"><br>
-            <label for="medium">Medium: ($6.00)</label>
-            <input type="checkbox" name="pizzaSize" value="medium"><br>
-            <label for="large">Large: ($9.00)</label>
-            <input type="checkbox" name="pizzaSize" value="large"><br>
-          </div>
-        </section>
+        <h3>Pizza Size</h3><br>
+        
+        <div id="form-group">
+          <label for="pizzaSize">Choose Size</label>
+          <select class="form-control" id="pizzaSize">
+            <option value="4.00">Small: ($4.00)</option>
+            <option value="6.00">Medium: ($6.00)</option>
+            <option value="9.00">Large: ($9.00)</option>
+            <option value="11.00">X-Large: ($11.00)</option>
+          </select>
+        </div>
+       <br>
       </div>
       <div name="reciept" class="reciept">
         <div class="reciept1">
-          <section class="col-md-6">
-            <h3>Customer Reciept</h3><hr>
-            <p>Name: <span class="name"></span></p>
-            <p>Number: <span class="number"></span></p>
-            <p>Toppings: <span class="finalToppings"></span></p>
-            <p>Size: <span class="finalSize"></span></p>
-            <p><strong>Bill Total: </strong><span class="finalTotal"></span></p>
-          </section>
+        
+          <h3>Customer Reciept</h3><hr>
+          <p>Name: <span id="name"></span></p>
+          <p>Number: <span id="number"></span></p>
+          <p>Toppings: <span id="finalToppings"></span></p>
+          <p>Size: <span id="finalSize"></span></p>
+          <p2><strong>Bill Total: </strong><span id="finalTotal"></span></p2>
+         
         </div>
       </div>
+      <br>
+      <button class="btn btn-secondary" id="submitButton">Submit</button>
     </div>   
-    <button class="btn btn-secondary" id="submitButton">Submit</button>
   </form>
 </body>
 </html>

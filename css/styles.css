@@ -1,50 +1,33 @@
-h1{
-
-}
 .container {
-  display: flex;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px; 
+  padding: 20px;
 }
 
-img {
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 5%;
-  float: right;
-  float: initial;
-  border: 1px solid black;
-  border-radius: 6px;
-  padding: 5px;
-  width: auto;
-  height: 300px;
-}
-.userName {
-  width: fit-content;
-  border: 7px solid rgb(240, 124, 58);
-  padding: 50px;
-  margin: 20px;
-}
 .toppings {
-  width: fit-content;
-  border: 7px solid rgb(240, 124, 58);
-  padding: 50px;
-  margin: 20px;
+  text-align: center;
+ 
 }
+
 .size {
-  width: fit-content;
-  border: 7px solid rgb(240, 124, 58);
-  padding: 50px;
-  margin: 20px;
+ text-align: center;
 }
+
 .reciept {
   display: none;
+  margin: auto;
   width: fit-content;
-  border: 7px solid rgb(240, 124, 58);
+  border: 7px solid black;
   padding: 50px;
-  margin: 20px;
 }
+
+.userName1, .userNumber {
+  color: red;
+}
+.userName1, .userNumber, #name, #number, #finalToppings, #finalSize, #finalTotal{
+  color: red;
+}
+
+
 body {
   text-align: center;
 }

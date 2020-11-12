@@ -36,15 +36,26 @@ git remote add origin [repo. link]
 ## **Specs**
 
 ```
-Describe: Pizza(size, topping);
+Describe: Pizza(size);
 Test: takes in two objects into the constructor
-Expect (Pizza(size, topping)).toEqual(true)
+Expect (Pizza(size)).toEqual(true)
 ```
 ```
-Describe: makePizza();
-Test: adds size and toppings to individual list for assignment
-Expect makePizza().toEqual(true)
+Describe: totalCost();
+Test: calculates each topping and size for a total
+Expect totalCost().toEqual(true)
 ```
+```
+Describe: addUserTopping();
+Test: adds each topping into its own index in array
+Expect addUserTopping().toEqual(true)
+```
+```
+Describe: toppingFinal();
+Test: joins indexed array into string for final result @ topping HTML id.
+Expect toppingFinal().toEqual(true)
+```
+
 
 ## Legal
 Copyright (c) 2020 Callie Stump
