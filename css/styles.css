@@ -1,3 +1,9 @@
+h1, label{ 
+  font-family: 'Times New Roman', Times, serif;
+}
+h3 {
+  font-family: 'Times New Roman', Times, serif;
+}
 .container {
   text-align: center;
   padding: 20px;
@@ -30,4 +36,38 @@
 
 body {
   text-align: center;
+}
+img {
+  
+  max-width: 300px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: .5s ease;
+  padding: 10px;
+  box-shadow: 0 10px 10px 0 rgba(236, 117, 5, 0.404), 0 6px 20px 0 rgba(20, 10, 2, 1);
+}
+.text {
+ 
+  background-color: rgba(253, 179, 43, 0.836);
+  color: black;
+  font-size: 15px;
+  padding: 16px 32px;
+}
+
+.middle{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.webContact:hover .image {
+  opacity: 0.3;
+}
+.webContact:hover .middle {
+  opacity: 1;
 }

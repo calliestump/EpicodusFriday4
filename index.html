@@ -8,9 +8,21 @@
   <title></title>
 </head>
 <body>
-  <form id ="parlor">
-    <h1>Callie's Pizza Parlor</h1><hr>
+  
     <div class="container">
+      <form id ="parlor">
+        <h1>Callie's Pizza Parlor</h1><hr>
+        <div class="webContact">
+          <img src="img/pizza.jpg" alt="pizza" class="image">
+          <div class="middle">
+            <div class="text"><strong>Email:</strong><br>callie@stu.mp<br><br><strong>Number:</strong><br>1 (800)-CAL-PIZA<br><br><strong>Address:</strong><br>1010 Venice Dr. Jackson, MI 49202</div>
+          </div>
+        </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       <div name="contact" class="userName">
         <label for="name">Order Name: </label><br>
         <input type="text" class="userName1">
@@ -21,39 +33,40 @@
       </div>
       <hr>
       <div name="topping" class="toppings">
-        <h3>Toppings</h3><br>
+        <h3><strong><u>Toppings</u></strong></h3><br>
         <div id="toppingList">
           <label class="custom-checkbox">Cheese ($1.00)</label>
-          <input name="cheese" type="checkbox" class="toppings" value="1.00"><br>
+          <input name="Cheese" type="checkbox" class="toppings" value="1.00"><br>
           <label class="custom-checkbox">Doubled Cheese ($2.00)</label>
-          <input name="doubledCheese" type="checkbox" class="toppings" value="2.00"><br>
+          <input name="Doubled Cheese" type="checkbox" class="toppings" value="2.00"><br>
           <label class="custom-checkbox">Pineapple ($1.00)</label>
-          <input name="pineapple" type="checkbox" class="toppings" value="1.00"><br>
+          <input name="Pineapple" type="checkbox" class="toppings" value="1.00"><br>
           <label class="custom-checkbox">Pepperoni ($1.00)</label>
-          <input name="pepperoni" type="checkbox" class="toppings" value="1.00"><br>
+          <input name="Pepperoni" type="checkbox" class="toppings" value="1.00"><br>
           <label class="custom-checkbox">Bacon ($1.00)</label>
-          <input name="bacon" type="checkbox" class="toppings" value="1.00"><br>
+          <input name="Bacon" type="checkbox" class="toppings" value="1.00"><br>
           <label class="custom-checkbox">Sausage ($1.00)</label>
-          <input  name="sausage" type="checkbox" class="toppings" value="1.00"><br>
+          <input  name="Sausage" type="checkbox" class="toppings" value="1.00"><br>
           <label class="custom-checkbox">Ham ($1.00)</label>
-          <input  name="ham" type="checkbox" class="toppings" value="1.00"><br>
+          <input  name="Ham" type="checkbox" class="toppings" value="1.00"><br>
         <div>
         
       </div>  
       <hr>
       <div name="size" class="size">
-        <h3>Pizza Size</h3><br>
+        <h3><strong><u>Pizza Size</u></strong></h3><br>
         
         <div id="form-group">
           <label for="pizzaSize">Choose Size</label>
           <select class="form-control" id="pizzaSize">
+            <option value="0.00">-None-</option>
             <option value="4.00">Small: ($4.00)</option>
             <option value="6.00">Medium: ($6.00)</option>
             <option value="9.00">Large: ($9.00)</option>
             <option value="11.00">X-Large: ($11.00)</option>
           </select>
         </div>
-       <br>
+        <br>
       </div>
       <div name="reciept" class="reciept">
         <div class="reciept1">
@@ -64,12 +77,16 @@
           <p>Toppings: <span id="finalToppings"></span></p>
           <p>Size: <span id="finalSize"></span></p>
           <p2><strong>Bill Total: </strong><span id="finalTotal"></span></p2>
-         
+          
         </div>
       </div>
       <br>
       <button class="btn btn-secondary" id="submitButton">Submit</button>
+      <br>
+      <br>
+      <input type="button" class="btn btn-secondary" id="reset" value="Create new order" onClick="document.location.reload(true)">
     </div>   
   </form>
+  
 </body>
 </html>
