@@ -5,7 +5,7 @@
 ## By _Callie Stump_
 ---
 ## **Description**
-This website takes a user to a Pizza Parlor webpage. The user gets asked for pizza size, topping, and contact information. Once order is submitted, a reciept is displayed to the screen.
+This website takes a user to a Pizza Parlor webpage. The user gets asked for pizza size, topping, and contact information. Once order is submitted, a reciept is displayed to the screen. For effective functionality each unit has been tested.
 
 ## **Setup**
 1. Copy this download link: https://github.com/calliestump/Friday4PizzaParlor.git
@@ -32,6 +32,7 @@ git remote add origin [repo. link]
 * jQuery
 * GIT
 * GitHub
+* Unit Testing
 
 ## **Specs**
 
